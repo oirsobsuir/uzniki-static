@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/Inter-VariableFont.ttf') format('woff2');
+    src: url('../fonts/Inter-VariableFont.ttf') format('woff');
+    src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Adobe Song Std';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/AdobeSongStd-Light.otf') format('woff2');
+    src: url('../fonts/AdobeSongStd-Light.otf') format('woff');
+    src: url('../fonts/AdobeSongStd-Light.otf') format('truetype');
+}
+
+:root {
+    font-size: 22px;
+    font-family: "Inter", serif;
+}
+
+* {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {}
+
+main {
+    flex-grow: 1;
+}
+
+footer {}
