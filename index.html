@@ -10,17 +10,17 @@
 </head>
 
 <body>
-    <div class="menu">
-        <div class="menu__container">
-            <div class="menu__menuButton menuButton menuButton--close">
+    <div id="menu" class="menu">
+        <div class="menu__container container">
+            <div id="menuButton_close" class="menu__menuButton menuButton" onclick="document.getElementById('menu').classList.remove('menu--opened')">
                 <div></div>
                 <div></div>
             </div>
             <nav class="menu__links">
-                <div class="menu__link">Истории узников</div>
-                <div class="menu__link">Фотоархив</div>
-                <div class="menu__link">Места геноцида Беларуси на карте</div>
-                <div class="menu__link">Правовая оценка геноцида белорусского народа в годы отечественной войны</div>
+                <a href="" class="links__item">Истории узников</a>
+                <a href="" class="links__item">Фотоархив</a>
+                <a href="" class="links__item">Места геноцида Беларуси на карте</a>
+                <a href="" class="links__item">Правовая оценка геноцида белорусского народа в годы отечественной войны</a>
             </nav>
             <div class="menu__addStory">
                 <button class="addStory__button">Хочу добавить историю</button>
@@ -30,20 +30,20 @@
     <header>
         <div class="header__container container">
             <div class="header__language">
-                <div class="language__bel">Бел</div>
-                <div class="language__rus">Рус</div>
-                <div class="language__nem">Нем</div>
+                <div class="language__item">Бел</div>
+                <div class="language__item">Рус</div>
+                <div class="language__item">Нем</div>
             </div>
-            <div class="header__logo logo">
-                <div class="logo__heading">УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
-                <div class="logo__text">геноцид Белорусского народа</div>
-            </div>
+            <a href="" class="header__logo logo">
+                <div>УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
+                <div>геноцид Белорусского народа</div>
+            </a>
             <div class="header__right">
                 <div class="header__links">
-                    <a href="" class="header__link">О проекте</a>
-                    <a href="" class="header__link">Контакты</a>
+                    <a href="" class="links__item">О проекте</a>
+                    <a href="" class="links__item">Контакты</a>
                 </div>
-                <div class="header__menuButton menuButton menuButton--open">
+                <div id="menuButton_open" class="header__menuButton menuButton" onclick="document.getElementById('menu').classList.add('menu--opened')">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -107,10 +107,10 @@
                 <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
             </div>
             <a href="" class="footer__privacyPolicy">Политика конфиденциальности</a>
-            <div class="footer__logo logo">
-                <div class="logo__heading">УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
-                <div class="logo__text">геноцид Белорусского народа</div>
-            </div>
+            <a href="" class="footer__logo logo">
+                <div>УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
+                <div>геноцид Белорусского народа</div>
+            </a>
             <div class="footer__copyright">Ⓒ Узники. Память: 1941-1945, 2024</div>
         </div>
     </footer>
