@@ -19,14 +19,9 @@
 }
 
 :root {
-    font-size: 20px;
-    font-family: "Inter", serif;
-}
-
-html,
-body {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.2;
+    font-family: "Inter", serif;
 }
 
 body {
@@ -97,10 +92,17 @@ body {
 
 .menu__links .links__item {
     padding: 1.25rem;
+}
+
+.links__item,
+.language__item,
+.header__logo {
     transition: color 150ms;
 }
 
-.menu__links .links__item:hover {
+.links__item:hover,
+.language__item:hover,
+.header__logo:hover {
     color: #E0B172;
 }
 
@@ -127,11 +129,6 @@ header {
 
 .language__item {
     padding: 0.5rem;
-    transition: color 150ms;
-}
-
-.language__item:hover {
-    color: #E0B172;
 }
 
 .header__logo {
@@ -165,11 +162,6 @@ header {
 
 .header__links .links__item {
     padding: 0.5rem;
-    transition: color 150ms;
-}
-
-.header__links .links__item:hover {
-    color: #E0B172;
 }
 
 .header__menuButton {
