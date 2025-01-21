@@ -50,6 +50,7 @@ input::-ms-clear {
 
 button {
     cursor: pointer;
+    background-color: unset;
 }
 
 button::-moz-focus-inner {

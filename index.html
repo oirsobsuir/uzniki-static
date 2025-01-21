@@ -12,99 +12,103 @@
 <body>
     <div id="menu" class="menu">
         <div class="menu__container container">
-            <div id="menuButton_close" class="menu__menuButton menuButton" onclick="document.getElementById('menu').classList.remove('menu--opened')">
+            <button id="menuButton_close" class="menu__menuButton menuButton" onclick="document.getElementById('menu').classList.remove('menu--opened')">
                 <div></div>
                 <div></div>
-            </div>
+            </button>
             <nav class="menu__links">
                 <a href="" class="links__item">Истории узников</a>
                 <a href="" class="links__item">Фотоархив</a>
                 <a href="" class="links__item">Места геноцида Беларуси на карте</a>
                 <a href="" class="links__item">Правовая оценка геноцида белорусского народа в годы отечественной войны</a>
             </nav>
-            <div class="menu__addStory">
-                <button class="addStory__button">Хочу добавить историю</button>
+            <div class="addStory__button">
+                <button>Хочу добавить историю</button>
             </div>
         </div>
     </div>
     <header>
         <div class="header__container container">
-            <div class="header__language">
-                <div class="language__item">Бел</div>
-                <div class="language__item">Рус</div>
-                <div class="language__item">Нем</div>
+            <div class="header__links">
+                <a href="" class="links__item">О проекте</a>
+                <a href="" class="links__item">Контакты</a>
             </div>
             <a href="" class="header__logo logo">
                 <div>УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
                 <div>геноцид Белорусского народа</div>
             </a>
-            <div class="header__right">
-                <div class="header__links">
-                    <a href="" class="links__item">О проекте</a>
-                    <a href="" class="links__item">Контакты</a>
-                </div>
-                <div id="menuButton_open" class="header__menuButton menuButton" onclick="document.getElementById('menu').classList.add('menu--opened')">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+            <button id="menuButton_open" class="header__menuButton menuButton" onclick="document.getElementById('menu').classList.add('menu--opened')">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
         </div>
     </header>
     <main>
         <div class="main__container container">
-            <div class="main__addStory addStory addStory--top">
+            <div class="main__addStory">
                 <div class="addStory__heading">
                     <span>Память и боль</span><span>белорусской земли</span><span>Нельзя забыть. Нельзя понять. Нельзя оправдать...</span>
                 </div>
-                <button class="addStory__button">Хочу добавить историю</button>
+                <div class="addStory__button">
+                    <button>Хочу добавить историю</button>
+                </div>
             </div>
-            <div class="main__search">
-                <div class="search__heading">Поиск жертв геноцида</div>
-                <div class="search__searchField"></div>
-            </div>
+            <form class="main__search">
+                <label for="victimsSearch">Поиск жертв геноцида</label>
+                <input type="text" name="victimsSearch" id="victimsSearch" placeholder="ФИО и(или) концлагерь">
+                <input type="submit" value="Поиск">
+            </form>
             <div class="main__topics">
-                <div class="topic">
-                    <img src="" alt="" class="topic__image">
+                <a href="" class="topics__topic">
+                    <div class="topic__image">
+                        <img src="images/topics/Stories.jpg" alt="Истории узников">
+                    </div>
                     <div class="topic__text">
                         <div class="topic__heading">Истории узников</div>
                         <div class="topic__text">Здесь вы найдете подлинные истории узников фашистского геноцида в Беларуси. Живые свидетели ужасов фашистских застенков, концлагерей, шталагов, лагерей смерти делятся страшными воспоминаниями тех жестоких лет. Как им удалось выжить, какие пытки пережить, как хоронили своих родных и близких.Здесь вы найдете подлинные истории узников фашистского геноцида в Беларуси. Живые свидетели ужасов фашистских застенков, концлагерей, шталагов, лагерей смерти делятся страшными воспоминаниями тех жестоких лет. Как им удалось выжить, какие пытки пережить, как хоронили своих родных и близких.</div>
                     </div>
-                </div>
-                <div class="topic">
-                    <img src="" alt="" class="topic__image">
+                </a>
+                <a href="" class="topics__topic">
+                    <div class="topic__image">
+                        <img src="images/topics/Photos.jpg" alt="Истории узников">
+                    </div>
                     <div class="topic__text">
                         <div class="topic__heading">Фотоархив</div>
                         <div class="topic__text">Здесь вы найдете уникальные снимки советских и немецких фотографов периода фашистской оккупации мест и жертв геноцида. Лица женщин, детей и стариков, переживших ужасы нацистских концлагерей. Живых и мертвых. Также фотографии немецких карателей и полицаев, солдат Красной Армии и партизан, освободителей узников в 1941 - 1944 годах. Также здесь вы найдете предвоенные и послевоенные снимки людей, выживших и замученных в местах принудительного содержания фашистов.</div>
                     </div>
-                </div>
-                <div class="topic">
-                    <img src="" alt="" class="topic__image">
+                </a>
+                <a href="" class="topics__topic">
+                    <div class="topic__image">
+                        <img src="images/topics/Assessment.jpg" alt="Истории узников">
+                    </div>
                     <div class="topic__text">
-                        <div class="topic__heading">Правовая оценка геноцида белорусского народа в годы отечественной войны</div>
+                        <div class="topic__heading">Правовая оценка геноцида белорусского народа в годы Великой Отечественной войны</div>
                         <div class="topic__text">Здесь вы найдете юридические документы международного и отечественного права применительно к теме геноцида белорусского народа в годы Отечественной войны 1941-1945 годов. Также - разъяснения юристов и публикации правового характера по вопросам геноцида.</div>
                     </div>
-                </div>
-                <div class="topic">
-                    <img src="" alt="" class="topic__image">
+                </a>
+                <a href="" class="topics__topic">
+                    <div class="topic__image">
+                        <img src="images/topics/Places.jpg" alt="Истории узников">
+                    </div>
                     <div class="topic__text">
                         <div class="topic__heading">Места геноцида Беларуси на карте</div>
                         <div class="topic__text">Здесь вы найдете географическое расположение мест геноцида на карте с наименованиями. Это тюрьмы, концлагеря, шталаги, лагеря смерти, гетто и другие.</div>
                     </div>
+                </a>
+                <div class="addStory__button">
+                    <button>Хочу добавить историю</button>
                 </div>
-            </div>
-            <div class="main__addStory addStory addStory--bottom">
-                <button class="addStory__button">Хочу добавить историю</button>
             </div>
         </div>
     </main>
     <footer>
         <div class="footer__container container">
             <div class="footer__sponsors">
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БФМ.png" alt="БФМ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БПЦ.svg" alt="БПЦ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/НАРБ.png" alt="НАРБ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БГУИР.svg" alt="БГУИР" class="sponsor__image"></a>
             </div>
             <a href="" class="footer__privacyPolicy">Политика конфиденциальности</a>
             <a href="" class="footer__logo logo">
