@@ -1,0 +1,67 @@
+.main__container {
+    padding: 5rem 2.5rem 4rem;
+}
+
+.uznik__image img {
+    width: 100%;
+    max-width: 28rem;
+    aspect-ratio: 4 / 3;
+    margin: 0 2rem 0.75rem 0;
+    object-fit: cover;
+    float: left;
+}
+
+.uznik__heading {
+    margin: 0 0 1rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.uznik__info {
+    padding: 0 0 0.5rem 0;
+}
+
+.uznik__info p {
+    margin: 0 0 0.5rem 0;
+}
+
+.uznik__text {
+    margin: 0 0 4rem 0;
+}
+
+@media screen and (max-width: 1560px) {
+    .main__container {
+        padding: 4rem 1.7rem 3rem;
+    }
+
+    .uznik__text {
+        margin: 0 0 3rem 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main__container {
+        padding: 2.5rem 1rem;
+    }
+
+    .uznik__text {
+        margin: 0 0 2.5rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .uznik__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .uznik__heading {
+        margin: 0 0 0.75rem;
+    }
+
+    .uznik__image img {
+        float: unset;
+        margin: 0 0 0.75rem 0;
+    }
+}

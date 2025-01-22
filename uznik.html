@@ -7,54 +7,52 @@
     <title>ФИО узника</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/uznik.css">
 </head>
 
 <body>
-    <div class="menu">
-        <div class="menu__container">
-            <div class="menu__menuButton menuButton menuButton--close">
+    <div id="menu" class="menu">
+        <div class="menu__container container">
+            <button id="menuButton_close" class="menu__menuButton menuButton" onclick="document.getElementById('menu').classList.remove('menu--opened')">
                 <div></div>
                 <div></div>
-            </div>
+            </button>
             <nav class="menu__links">
-                <div class="menu__link">Истории узников</div>
-                <div class="menu__link">Фотоархив</div>
-                <div class="menu__link">Места геноцида Беларуси на карте</div>
-                <div class="menu__link">Правовая оценка геноцида белорусского народа в годы отечественной войны</div>
+                <a href="" class="links__item">Истории узников</a>
+                <a href="" class="links__item">Фотоархив</a>
+                <a href="" class="links__item">Места геноцида Беларуси на карте</a>
+                <a href="" class="links__item">Правовая оценка геноцида белорусского народа в годы отечественной войны</a>
+                <a href="" class="links__item links__item--mobileVisible">О проекте</a>
+                <a href="" class="links__item links__item--mobileVisible">Контакты</a>
+                <div class="button__container">
+                    <button class="button">Хочу добавить историю</button>
+                </div>
             </nav>
-            <div class="menu__addStory">
-                <button class="addStory__button">Хочу добавить историю</button>
-            </div>
         </div>
     </div>
     <header>
         <div class="header__container container">
-            <div class="header__language">
-                <div class="language__bel">Бел</div>
-                <div class="language__rus">Рус</div>
-                <div class="language__nem">Нем</div>
+            <div class="header__links">
+                <a href="" class="links__item links__item--mobileUnvisible">О проекте</a>
+                <a href="" class="links__item links__item--mobileUnvisible">Контакты</a>
             </div>
-            <div class="header__logo logo">
-                <div class="logo__heading">УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
-                <div class="logo__text">геноцид Белорусского народа</div>
-            </div>
-            <div class="header__right">
-                <div class="header__links">
-                    <a href="" class="header__link">О проекте</a>
-                    <a href="" class="header__link">Контакты</a>
-                </div>
-                <div class="header__menuButton menuButton menuButton--open">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+            <a href="" class="header__logo logo">
+                <div>УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
+                <div>геноцид Белорусского народа</div>
+            </a>
+            <button id="menuButton_open" class="header__menuButton menuButton" onclick="document.getElementById('menu').classList.add('menu--opened')">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
         </div>
     </header>
     <main>
         <div class="main__container container">
             <div class="main__uznik">
-                <img src="" alt="" class="uznik__image">
+                <div class="uznik__image">
+                    <img src="images/delete_this_1.png" alt="Шпак Николай Трофимович">
+                </div>
                 <div class="uznik__heading">Шпак Николай Трофимович</div>
                 <div class="uznik__info">
                     <p><strong>Дата рождения: </strong>01-01-1914</p>
@@ -65,22 +63,22 @@
                 </div>
                 <div class="uznik__text">На третий день Великой Отечественной войны отец ушел на фронт и погиб в 1944 году. До 1943 года жили в деревне. В феврале немцы делали облавы, захваты, забирали людей, сортировали их, а детей 8-12 лет отправляли в концентрационный лагерь «Красный берег». Я был маленький, мне было 2 года и 2 месяца. Меня также могли отправить в этот лагерь, где немцы брали чистую кровь у детей для немецких солдат и офицеров. Но меня с мамой, как и других жителей деревень, погрузили в товарные вагоны-телятники и повезли в Германию. Место, где содержался в качестве узника: г. Виттенберг, на берегу Эльбы. Концентрационный лагерь состоял из маленьких бараков, окруженный колючей проволокой, выхода никакого не было. Мать работала на железной дороге, таскала шпалы, делала подсыпку. Жили в лагере 1 год и 2 месяца. Вспоминается лагерная решетка, песочница. Иногда проходящие жители-немцы бросали туда конфеты. Немцы ушли, оставив лагерь. Люди бросились в расположенный рядом лес. Вечером услышали песню «Катюша». Наутро появляются немцы-конвоиры, строят всех в колонну и куда-то ведут, кто пытается бежать, бросают гранаты, но появились наши кавалеристы и освободили всех оставшихся в живых. Так, благодаря нашим советским воинам, мы были спасены в мае 1945 г. Домой, Победа. Вспоминается высокое, высокое жито, по которому шли, а сам маленький. Жили на хуторе Зимча у бабушки. Ходил в школу до 4 класса за 4 км, а до 10 класса за 7 км. После школы окончил ремесленное училище по специальности рулевой моторист. Служил в Советской армии. Окончил политехнический институт по специальности инженер- технолог. С 1980 г. преподавал в автомеханическом техникуме, а с 2002 работаю заведующим лаборатории жидкости и газа в Минском государственном автомеханическом колледже.</div>
             </div>
-            <div class="main__gallery"></div>
+            <div class="main__gallery"><i>/* Тут будет галерея */</i></div>
         </div>
     </main>
     <footer>
         <div class="footer__container container">
             <div class="footer__sponsors">
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
-                <a href="" class="sponsor__link"><img src="" alt="" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БФМ.svg" alt="БФМ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БПЦ.svg" alt="БПЦ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/НАРБ.svg" alt="НАРБ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/sponsors/БГУИР.svg" alt="БГУИР" class="sponsor__image"></a>
             </div>
             <a href="" class="footer__privacyPolicy">Политика конфиденциальности</a>
-            <div class="footer__logo logo">
-                <div class="logo__heading">УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
-                <div class="logo__text">геноцид Белорусского народа</div>
-            </div>
+            <a href="" class="footer__logo logo">
+                <div>УЗНИКИ. ПАМЯТЬ: 1941-1945</div>
+                <div>геноцид Белорусского народа</div>
+            </a>
             <div class="footer__copyright">Ⓒ Узники. Память: 1941-1945, 2024</div>
         </div>
     </footer>
