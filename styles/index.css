@@ -3,9 +3,9 @@
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url('../fonts/Inter-VariableFont.ttf') format('woff2');
-    src: url('../fonts/Inter-VariableFont.ttf') format('woff');
-    src: url('../fonts/Inter-VariableFont.ttf') format('truetype');
+    src: url('../fonts/Inter-VariableFont.woff2') format('woff2');
+    src: url('../fonts/Inter-VariableFont.woff2') format('woff');
+    src: url('../fonts/Inter-VariableFont.woff2') format('truetype');
 }
 
 @font-face {
@@ -13,9 +13,9 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url('../fonts/AdobeSongStd-Light.otf') format('woff2');
-    src: url('../fonts/AdobeSongStd-Light.otf') format('woff');
-    src: url('../fonts/AdobeSongStd-Light.otf') format('truetype');
+    src: url('../fonts/AdobeSongStd-Light.woff2') format('woff2');
+    src: url('../fonts/AdobeSongStd-Light.woff2') format('woff');
+    src: url('../fonts/AdobeSongStd-Light.woff2') format('truetype');
 }
 
 :root {
@@ -110,17 +110,21 @@ body {
     padding: 1rem;
 }
 
-.addStory__button {
+.links__item--mobileVisible {
+    display: none;
+}
+
+.button__container {
     display: flex;
     justify-content: center;
 }
 
-.menu__container .addStory__button {
-    padding: 2.5rem 1rem 0 1rem;
+.menu__links .button__container {
+    padding: 2.25rem 1rem 0 1rem;
     justify-content: start;
 }
 
-.addStory__button button {
+.button {
     padding: 0.8rem 2.2rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -129,7 +133,7 @@ body {
     transition: background-color 150ms;
 }
 
-.addStory__button button:hover {
+.button:hover {
     background-color: #FCA32B;
 }
 
@@ -206,15 +210,49 @@ main {
 
 .main__container {
     margin-top: 5.04rem;
-    /* 1.5rem + 1.2 * (1.1rem + 0.6rem) + 1.5rem — <header>'s height */
+    /* header height = 1.5rem + (1.1 + 0.6) * 1.2rem + 1.5rem = 5.04rem */
 }
 
 .main__addStory {
-    height: 80vh;
+    height: calc(100vh - 13.14rem);
+    /* .addStory height = 100vh - header height - .main__search height = 100vh - 1.5rem - (1.1 + 0.6) * 1.2rem - 1.5rem - 1.5rem - 1.2rem - 1rem - 0.05rem - 0.8rem - 1.2rem - 0.8rem - 0.05rem - 1.5rem = 100vh - 13.14rem */
+    padding: 0 0 4rem 0;
+    display: flex;
+    flex-direction: column;
     background-image: url('../images/neverForgive.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.addStory__heading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.addStory__heading p:nth-child(1) {
+    font-family: 'Adobe Song Std', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.addStory__heading p:nth-child(2) {
+    font-family: 'Adobe Song Std', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.addStory__heading p:nth-child(3) {
+    margin: 0.25rem 0 0 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .main__search {
@@ -232,13 +270,23 @@ main {
 }
 
 .main__search input[type="text"] {
-    width: 60%;
+    width: 80%;
     padding: 0.8rem;
     font-size: 1rem;
     color: #FFFFFF;
     background-color: #1F1B16;
-    border: 1px solid #999999;
+    border: 0.05rem solid #757575;
     border-radius: 0.2rem;
+    transition: border-color 300ms;
+}
+
+.main__search input[type="text"]:focus {
+    border-color: #FFFFFF;
+}
+
+.main__search input[type="submit"] svg {
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .main__topics {
@@ -330,12 +378,16 @@ footer {
         row-gap: 0.25rem;
     }
 
+    .main__addStory {
+        padding: 0 0 3rem 0;
+    }
+
     .main__search {
         padding: 1.5rem 1.7rem;
     }
 
     .main__search input[type="text"] {
-        width: 80%;
+        width: 90%;
     }
 
     .main__topics {
@@ -366,6 +418,10 @@ footer {
         font-size: 1.2rem;
     }
 
+    .main__addStory {
+        padding: 0 0 2.5rem 0;
+    }
+
     .main__search {
         padding: 1.5rem 1rem;
     }
@@ -391,6 +447,22 @@ footer {
 @media screen and (max-width: 768px) {
     .menu__container {
         padding: 3.8rem 0;
+    }
+
+    .header__links {
+        width: 2.25rem;
+    }
+
+    .links__item--mobileVisible {
+        display: block;
+    }
+
+    .links__item--mobileUnvisible {
+        display: none;
+    }
+
+    .header__menuButton {
+        margin: 0;
     }
 
     .topic__image {
