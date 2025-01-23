@@ -1,0 +1,39 @@
+.width-100per {
+    width: 100%;
+}
+
+.width-50per {
+    width: 50%;
+}
+
+.width-33per {
+    width: 33%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.row-gap-0-75rem {
+    row-gap: 0.75rem;
+}
+
+.col-gap-1-0rem {
+    column-gap: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-red {
+    color: red;
+}
