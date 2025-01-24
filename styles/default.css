@@ -10,6 +10,10 @@
     width: 33%;
 }
 
+.mt-0-25rem {
+    margin-top: 0.25rem;
+}
+
 .d-flex {
     display: flex;
 }
@@ -24,6 +28,10 @@
 
 .row-gap-0-75rem {
     row-gap: 0.75rem;
+}
+
+.row-gap-1-25rem {
+    row-gap: 1.25rem;
 }
 
 .col-gap-1-0rem {

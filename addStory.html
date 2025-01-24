@@ -56,118 +56,87 @@
                     <div class="d-flex flex-column row-gap-0-75rem">
                         <div class="participant__surname">
                             <label for="participant__surname">Фамилия участника<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="participant__surname" id="participant__surname">
+                            <input class="textInput textInput--light" type="text" name="participant__surname" id="participant__surname" required>
                         </div>
                         <div class="participant__name">
                             <label for="participant__name">Имя участника<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="participant__name" id="participant__name">
+                            <input class="textInput textInput--light" type="text" name="participant__name" id="participant__name" required>
                         </div>
                         <div class="participant__patronymic">
                             <label for="participant__patronymic">Отчество участника<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="participant__patronymic" id="participant__patronymic">
+                            <input class="textInput textInput--light" type="text" name="participant__patronymic" id="participant__patronymic" required>
                         </div>
-                        <div class="d-flex col-gap-1-0rem">
-                            <div class="width-50per">
+                        <div class="participant__birthDeath">
+                            <div class="participant__birth">
                                 <label for="participant__birth">Дата рождения<span class="text-red"> *</span></label>
-                                <input class="textInput textInput--light" type="date" name="participant__birth" id="participant__birth">
+                                <input class="textInput textInput--light" type="date" name="participant__birth" id="participant__birth" required>
                             </div>
-                            <div class="width-50per">
-                                <label for="participant__death">Дата рождения<span class="text-red"> *</span></label>
+                            <div class="participant__death">
+                                <label for="participant__death">Дата смерти</label>
                                 <input class="textInput textInput--light" type="date" name="participant__death" id="participant__death">
                             </div>
                         </div>
                         <div class="participant__birthPlace">
                             <label for="participant__birthPlace">Место рождения<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="participant__birthPlace" id="participant__birthPlace">
+                            <input class="textInput textInput--light" type="text" name="participant__birthPlace" id="participant__birthPlace" required>
                         </div>
                         <div class="participant__detentionPlace">
                             <label for="participant__detentionPlace">Место содержания<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="participant__detentionPlace" id="participant__detentionPlace">
+                            <input class="textInput textInput--light" type="text" name="participant__detentionPlace" id="participant__detentionPlace" required>
                         </div>
-                        <div>Начало содержания</div>
-                        <div class="d-flex col-gap-1-0rem">
-                            <div class="width-33per">
-                                <label for="participant__detentionFrom_year">Год<span class="text-red"> *</span></label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionFrom_year" id="participant__detentionFrom_year">
-                            </div>
-                            <div class="width-33per">
-                                <label for="participant__detentionFrom_month">Месяц</label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionFrom_month" id="participant__detentionFrom_month">
-                            </div>
-                            <div class="width-33per">
-                                <label for="participant__detentionFrom_day">День</label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionFrom_day" id="participant__detentionFrom_day">
+                        <div class="participant__detentionFrom">
+                            <div class="participant__detentionFrom_title">Начало содержания</div>
+                            <div class="participant__detentionFrom_inputs">
+                                <div class="participant__detentionFrom_year">
+                                    <label for="participant__detentionFrom_year">Год<span class="text-red"> *</span></label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionFrom_year" id="participant__detentionFrom_year" min="1940" max="1945" required>
+                                </div>
+                                <div class="participant__detentionFrom_month">
+                                    <label for="participant__detentionFrom_month">Месяц</label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionFrom_month" id="participant__detentionFrom_month" min="1" max="12">
+                                </div>
+                                <div class="participant__detentionFrom_day">
+                                    <label for="participant__detentionFrom_day">День</label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionFrom_day" id="participant__detentionFrom_day" min="1" max="31">
+                                </div>
                             </div>
                         </div>
-                        <div>Конец содержания</div>
-                        <div class="d-flex col-gap-1-0rem">
-                            <div class="width-33per">
-                                <label for="participant__detentionTo_year">Год<span class="text-red"> *</span></label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionTo_year" id="participant__detentionTo_year">
-                            </div>
-                            <div class="width-33per">
-                                <label for="participant__detentionTo_month">Месяц</label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionTo_month" id="participant__detentionTo_month">
-                            </div>
-                            <div class="width-33per">
-                                <label for="participant__detentionTo_day">День</label>
-                                <input class="textInput textInput--light" type="number" name="participant__detentionTo_day" id="participant__detentionTo_day">
+                        <div class="participant__detentionTo">
+                            <div class="participant__detentionTo_title">Конец содержания</div>
+                            <div class="participant__detentionTo_inputs">
+                                <div class="participant__detentionTo_year">
+                                    <label for="participant__detentionTo_year">Год<span class="text-red"> *</span></label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionTo_year" id="participant__detentionTo_year" min="1940" max="1945" required>
+                                </div>
+                                <div class="participant__detentionTo_month">
+                                    <label for="participant__detentionTo_month">Месяц</label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionTo_month" id="participant__detentionTo_month" min="1" max="12">
+                                </div>
+                                <div class="participant__detentionTo_day">
+                                    <label for="participant__detentionTo_day">День</label>
+                                    <input class="textInput textInput--light" type="number" name="participant__detentionTo_day" id="participant__detentionTo_day" min="1" max="31">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex flex-column row-gap-0-75rem">
+                    <div class="d-flex flex-column row-gap-1-25rem">
                         <div class="participant__story">
                             <label for="participant__story">Краткая история<span class="text-red"> *</span></label>
-                            <textarea class="textInput textInput--light" name="participant__story" id="participant__story" rows="11"></textarea>
+                            <textarea class="textInput textInput--light" name="participant__story" id="participant__story" rows="11" required></textarea>
                         </div>
                         <div class="participant__photo">
-                            <div class="d-flex align-items-center">
-                                <label for="participant__photo" class="btn btn--add">
-                                    <div class="plus-icon"></div>
-                                </label>Фото (Размер изображения не должен превышать 5 мб)<input type="file" name="participant__photo" id="participant__photo" multiple>
+                            <div class="photo__input-container">
+                                <label for="participant__photo" class="button">
+                                    Добавить фото
+                                </label> Размер изображения не должен превышать 5 мб<input type="file" name="participant__photo" id="participant__photo" accept="image/*" multiple>
                             </div>
-                            <div class="photo__preview" id="photo__preview"></div>
+                            <div class="photo__previews" id="photo__previews"></div>
                         </div>
-                        <script>
-                            const fileInput = document.getElementById('participant__photo');
-                            const previewContainer = document.getElementById('photo__preview');
-
-                            fileInput.addEventListener('change', function () {
-                                const files = Array.from(this.files);
-
-                                files.forEach((file) => {
-                                    const reader = new FileReader();
-                                    reader.onload = function (e) {
-                                        const img = document.createElement('img');
-                                        img.src = e.target.result;
-
-                                        const fileName = document.createElement('span')
-                                        fileName.innerHTML = file.name;
-
-                                        const deleteButton = document.createElement('div');
-                                        deleteButton.innerHTML = '<div class="cross-icon"></div>';
-                                        deleteButton.className = 'btn btn--delete';
-                                        deleteButton.onclick = () => {
-                                            deleteButton.parentElement.remove();
-                                        };
-
-                                        const div = document.createElement('div');
-                                        div.className = 'preview__item';
-                                        div.appendChild(deleteButton);
-                                        div.appendChild(img);
-                                        div.appendChild(fileName);
-                                        previewContainer.appendChild(div);
-                                    };
-                                    reader.readAsDataURL(file);
-                                });
-                            });
-                        </script>
                         <div class="participant__video">
-                            <input type="file" name="participant__video" id="participant__video">
-                        </div>
-                        <div class="participant__iframe">
-                            <label for="participant__iframe">Встраивание видео (iframe)</label>
-                            <textarea class="textInput textInput--light" name="participant__iframe" id="participant__iframe" rows="3"></textarea>
+                            <div class="video__input-container">
+                                <input class="button" type="button" name="participant__video" id="participant__video" value="Добавить видео">Встраивание iframe
+                            </div>
+                            <div class="video__iframes" id="video__iframes"></div>
                         </div>
                     </div>
                     <div class="d-flex flex-column row-gap-0-75rem">
@@ -177,15 +146,15 @@
                         </div>
                         <div class="sender__FIO">
                             <label for="sender__FIO">ФИО<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="text" name="sender__FIO" id="sender__FIO">
+                            <input class="textInput textInput--light" type="text" name="sender__FIO" id="sender__FIO" required>
                         </div>
                         <div class="sender__phone">
                             <label for="sender__phone">Телефон<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="tel" name="sender__phone" id="sender__phone">
+                            <input class="textInput textInput--light" type="tel" name="sender__phone" id="sender__phone" required>
                         </div>
                         <div class="sender__email">
                             <label for="sender__email">Email<span class="text-red"> *</span></label>
-                            <input class="textInput textInput--light" type="email" name="sender__email" id="sender__email">
+                            <input class="textInput textInput--light" type="email" name="sender__email" id="sender__email" required>
                         </div>
                     </div>
                 </div>
@@ -211,6 +180,8 @@
             <div class="footer__copyright">Ⓒ Узники. Память: 1941-1945, 2024</div>
         </div>
     </footer>
+    <script src="scripts/photoInput.js"></script>
+    <script src="scripts/videoInput.js"></script>
 </body>
 
 </html>
