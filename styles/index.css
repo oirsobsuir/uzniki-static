@@ -241,6 +241,7 @@ main {
 
 .main__addStory {
     height: calc(100vh - 13.14rem);
+    min-height: 15rem;
     /* .addStory height = 100vh - header height - .main__search height = 100vh - 1.5rem - (1.1 + 0.6) * 1.2rem - 1.5rem - 1.5rem - 1.2rem - 1rem - 0.05rem - 0.8rem - 1.2rem - 0.8rem - 0.05rem - 1.5rem = 100vh - 13.14rem */
     padding: 0 0 4rem 0;
     display: flex;
@@ -558,6 +559,7 @@ footer {
 
     .topic__heading {
         margin: 0 0 0.5rem 0;
+        font-size: 1.25rem;
         text-align: center;
     }
 
