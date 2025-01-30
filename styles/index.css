@@ -102,7 +102,7 @@ h3 {
 
 .menu__menuButton {
     position: absolute;
-    top: 1.6rem;
+    top: 1.8rem;
     right: 2rem;
 }
 
@@ -216,7 +216,7 @@ header {
 }
 
 .logo>p:nth-child(2) {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
 }
 
 .header__menuButton {
@@ -434,6 +434,10 @@ footer {
         font-size: 1.4rem;
     }
 
+    .menu__menuButton {
+        right: 1.2rem;
+    }
+
     .menu__links {
         row-gap: 0.25rem;
     }
@@ -480,6 +484,10 @@ footer {
     .menu__container {
         padding: 4.8rem 3rem;
         font-size: 1.2rem;
+    }
+
+    .menu__menuButton {
+        right: 0;
     }
 
     .header__container {
