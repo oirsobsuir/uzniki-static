@@ -9,13 +9,13 @@
 }
 
 @font-face {
-    font-family: 'Adobe Song Std';
+    font-family: 'Bona Nova';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url('../fonts/AdobeSongStd-Light.woff2') format('woff2');
-    src: url('../fonts/AdobeSongStd-Light.woff2') format('woff');
-    src: url('../fonts/AdobeSongStd-Light.woff2') format('truetype');
+    src: url('../fonts/BonaNova-Regular.woff2') format('woff2');
+    src: url('../fonts/BonaNova-Regular.woff2') format('woff');
+    src: url('../fonts/BonaNova-Regular.woff2') format('truetype');
 }
 
 :root {
@@ -28,6 +28,27 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    font-family: 'Bona Nova', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .container {
@@ -126,9 +147,12 @@ body {
 
 .button {
     padding: 0.8rem 2.2rem;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
     text-transform: uppercase;
     white-space: nowrap;
+    color: #000000;
     border-radius: 0.2rem;
     background-color: #E0B172;
     cursor: pointer;
@@ -136,7 +160,7 @@ body {
 }
 
 .button:hover {
-    background-color: #FCA32B;
+    background-color: #FFD59D;
 }
 
 .links__item,
@@ -186,12 +210,12 @@ header {
     padding: 1.5rem;
 }
 
-.logo>div:first-child {
+.logo>p:nth-child(1) {
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-.logo>div:last-child {
+.logo>p:nth-child(2) {
     font-size: 0.6rem;
 }
 
@@ -221,7 +245,7 @@ main {
     padding: 0 0 4rem 0;
     display: flex;
     flex-direction: column;
-    background-image: url('../images/addStory_background.jpg');
+    background-image: url('../images/index/heading/heading.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -238,22 +262,24 @@ main {
     color: #FFFFFF;
 }
 
-.addStory__heading p:nth-child(1) {
-    font-family: 'Adobe Song Std', serif;
-    font-size: 2.5rem;
+.addStory__heading p:nth-child(1),
+.addStory__heading p:nth-child(2) {
+    font-family: 'Bona Nova', serif;
     font-weight: 300;
     text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.addStory__heading p:nth-child(1) {
+    font-size: 3.2rem;
 }
 
 .addStory__heading p:nth-child(2) {
-    font-family: 'Adobe Song Std', serif;
-    font-size: 1.7rem;
-    font-weight: 300;
-    text-transform: uppercase;
+    font-size: 2rem;
 }
 
 .addStory__heading p:nth-child(3) {
-    margin: 0.25rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-family: 'Inter', sans-serif;
 }
 
@@ -303,6 +329,10 @@ main {
     box-shadow: 0 0 0 0.1rem #E0B172;
 }
 
+.search-container .textInput {
+    padding-right: 2.8rem;
+}
+
 .search-container button[type="submit"] {
     position: absolute;
     right: 0;
@@ -329,16 +359,17 @@ main {
     row-gap: 4rem;
 }
 
-.topic__image img {
+.topic__image {
     width: 100%;
     max-width: 22rem;
+    display: block;
     aspect-ratio: 16 / 9;
     margin: 0 2rem 1rem 0;
     object-fit: cover;
     float: left;
 }
 
-.topics__topic:hover .topic__heading {
+.topics__item:hover .topic__heading {
     text-decoration: underline;
 }
 
@@ -367,11 +398,6 @@ footer {
     column-gap: 1.5rem;
 }
 
-.sponsor__item:nth-child(1) {
-    border-radius: 50%;
-    background-color: #FFFFFF;
-}
-
 .sponsor__item {
     height: 3rem;
 }
@@ -389,6 +415,7 @@ footer {
 
 .footer__logo {
     justify-self: start;
+    text-align: left;
 }
 
 .footer__copyright {
@@ -423,7 +450,7 @@ footer {
         padding: 1.5rem 1.7rem;
     }
 
-    .main__search input[type="text"] {
+    .search-container {
         width: 90%;
     }
 
@@ -432,7 +459,7 @@ footer {
         row-gap: 3rem;
     }
 
-    .topic__image img {
+    .topic__image {
         margin: 0 1rem 0.5rem 0;
     }
 
@@ -467,7 +494,7 @@ footer {
         padding: 1.5rem 1rem;
     }
 
-    .main__search input[type="text"] {
+    .search-container {
         width: 100%;
     }
 
@@ -507,13 +534,8 @@ footer {
     }
 
     .topic__image {
-        display: flex;
-        justify-content: center;
-    }
-
-    .topic__image img {
         float: unset;
-        margin: 0 0 0.5rem 0;
+        margin: 0 auto 0.5rem auto;
     }
 
     .topic__heading {
@@ -525,28 +547,4 @@ footer {
         display: flex;
         flex-direction: column;
     }
-}
-
-@media screen and (max-width: 440px) {
-    .main__container {
-        margin: 6.24rem 0 0 0;
-    }
-
-    .main__addStory {
-        height: calc(100vh - 14.34rem);
-    }
-}
-
-h1 {
-    font-family: 'Adobe Song Std', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-transform: uppercase;
 }
