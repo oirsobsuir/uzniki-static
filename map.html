@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="canonical" href="">
+    <link rel="icon" href="" type="image/x-icon">
+    <title>Узники</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <!-- <link rel="stylesheet" href="map/map.css"> -->
+    <!-- <script src="map/map.js"></script> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+</head>
+
+<body>
+    <header>
+        <div class="header__container container">
+            <div class="header__links">
+                <a href="" class="links__item links__item--mobileUnvisible">О проекте</a>
+                <a href="" class="links__item links__item--mobileUnvisible">Контакты</a>
+            </div>
+            <a href="" class="header__logo logo">
+                <p>УЗНИКИ. ПАМЯТЬ: 1941-1945</p>
+                <p>геноцид Белорусского народа</p>
+            </a>
+            <button id="menuButton_open" class="header__menuButton menuButton">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="main__container container">
+            <div id="map"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__container container">
+            <div class="footer__sponsors">
+                <a href="" class="sponsor__item"><img src="images/footer/BFM.svg" alt="БФМ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/footer/BPC.svg" alt="БПЦ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/footer/NARB.svg" alt="НАРБ" class="sponsor__image"></a>
+                <a href="" class="sponsor__item"><img src="images/footer/BSUIR.svg" alt="БГУИР" class="sponsor__image"></a>
+            </div>
+            <a href="" class="footer__privacyPolicy">Политика конфиденциальности</a>
+            <a href="" class="footer__logo logo">
+                <p>УЗНИКИ. ПАМЯТЬ: 1941-1945</p>
+                <p>геноцид Белорусского народа</p>
+            </a>
+            <div class="footer__copyright">Ⓒ Узники. Память: 1941-1945, 2024</div>
+        </div>
+    </footer>
+    <style>
+        #map {
+            margin-top: 150px;
+            height: 600px;
+        }
+    </style>
+    <script>
+        var map = L.map('map', { attributionControl: false }).setView([53.902222, 27.561389], 6);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+        map.zoomControl.setPosition('topright');
+        L.control.attribution({ prefix: '<b>Text</b><i>Sample</i>' }).addTo(map);
+
+        var marker = L.marker([53.902222, 27.561389]).addTo(map);
+        var popup = L.popup().setContent('<b>Text</b><i>Sample</i>');
+        marker.bindPopup(popup);
+
+        var markerClicked = false;
+
+        marker.on('mouseover', () => {
+            marker.openPopup();
+        });
+        marker.on('mouseout', () => {
+            if (!markerClicked) {
+                setTimeout(() => {
+                    marker.closePopup();
+                }, 300);
+            }
+        });
+        marker.on('click', () => {
+            marker.openPopup();
+            markerClicked = true;
+        });
+        map.on('click', () => {
+            markerClicked = false;
+        });
+    </script>
+</body>
+
+</html>
