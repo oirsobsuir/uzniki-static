@@ -65,32 +65,39 @@
         }
     </style>
     <script>
+        var info = 'Озаричи';
+        var fullInfo = '<img src="../map/delete-this.jpg" style="width:22vw;aspect-ratio:4/3;margin:0 0 0.5rem 0;"/><p style="margin:0 0 0.25rem 0">ОЗАРИЧИ</p><p style="margin:0 0 0.25rem 0"><strong>Местоположение:</strong><span>Беларусь, Гомельская область, Калинковичский район</span></p><p style="margin:0 0 0.25rem 0"><strong>Дата основания:</strong><span>10.03.1944</span></p><p style="margin:0"><strong>Количество умерших:</strong><span>13000</span></p>';
+        var markerClicked = false;
+
         var map = L.map('map', { attributionControl: false }).setView([53.902222, 27.561389], 6);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
         map.zoomControl.setPosition('topright');
-        L.control.attribution({ prefix: '<b>Text</b><i>Sample</i>' }).addTo(map);
+        L.control.attribution({ prefix: false, position: 'bottomright' }).addAttribution(
+            '<div style="display:inline-block;height:0.5rem;width:0.5rem;background:#D88311;border-radius:0.5rem;"></div> — Концентрационные лагеря<br><div style="display:inline-block;height:0.5rem;width:0.5rem;background:#49598C;border-radius:0.5rem;"></div> — Концентрационные лагеря'
+        ).addTo(map);
 
         var marker = L.marker([53.902222, 27.561389]).addTo(map);
-        var popup = L.popup().setContent('<b>Text</b><i>Sample</i>');
+        var popup = L.popup().setContent(info);
         marker.bindPopup(popup);
-
-        var markerClicked = false;
 
         marker.on('mouseover', () => {
             marker.openPopup();
         });
+
         marker.on('mouseout', () => {
             if (!markerClicked) {
-                setTimeout(() => {
-                    marker.closePopup();
-                }, 300);
+                marker.closePopup();
             }
         });
+
         marker.on('click', () => {
+            popup.setContent(fullInfo);
             marker.openPopup();
             markerClicked = true;
         });
+
         map.on('click', () => {
+            popup.setContent(info);
             markerClicked = false;
         });
     </script>
